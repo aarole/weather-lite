@@ -1,4 +1,4 @@
-package com.aarole.owm_test;
+package com.aarole.weather_lite;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -18,6 +18,9 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.aarole.weather_lite.R;
 
 import java.io.IOException;
 import java.util.List;
@@ -45,6 +48,11 @@ public class HomeActivity extends AppCompatActivity {
                 Log.d("btnclick", "Button is clicked");
                 if(!input.getText().toString().isEmpty()){
                     city = input.getText().toString();
+                }
+
+                if(city ==null){
+                    Toast.makeText(HomeActivity.this, "Please enter a location or wait for your location to be detected.", Toast.LENGTH_LONG).show();
+                    return;
                 }
 
                 Intent intent = new Intent(HomeActivity.this, MainActivity.class);

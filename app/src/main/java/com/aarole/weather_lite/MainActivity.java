@@ -1,4 +1,4 @@
-package com.aarole.owm_test;
+package com.aarole.weather_lite;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,8 +10,9 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
+
+import com.aarole.weather_lite.R;
 
 import org.json.JSONException;
 import org.json.JSONObject;
