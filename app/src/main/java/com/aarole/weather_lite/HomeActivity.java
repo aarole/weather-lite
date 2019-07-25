@@ -83,7 +83,11 @@ public class HomeActivity extends AppCompatActivity {
                     e.printStackTrace();
                 }
                 String loc = city + ", " + state + " - " + pin;
+
                 currentLocation.setText(loc);
+                if(!currentLocation.getText().toString().isEmpty()){
+                    findViewById(R.id.progress).setVisibility(View.GONE);
+                }
             }
 
             @Override
